@@ -1,0 +1,40 @@
+﻿@using Application.Contracts;
+@using Application.Services.Recruitments;
+@{
+  ViewBag.Title = "Chiến dịch tuyển dụng";
+}
+
+@model IEnumerable<RecruitmentResponse>
+
+<div class="d-flex justify-content-end p-2 mb-2">
+  <a asp-controller="" asp-action="" class="btn btn-primary">Create</a>
+</div>
+<table class="table table-tripped">
+  <thead>
+    <tr>
+      <td>@Html.DisplayNameFor(e => e.Name)</td>
+      <td>@Html.DisplayNameFor(e => e.StartDate)</td>
+      <td>@Html.DisplayNameFor(e => e.EndDate)</td>
+      <td>Salary Range</td>
+      <td>Kinh nghiem</td>
+      <td>@Html.DisplayNameFor(e => e.Number)</td>
+      <td></td>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach(var record in Model)
+    {
+      <tr>
+        <td>@record.Name</td>
+        <td>@record.StartDate</td>
+        <td>@record.EndDate</td>
+        <td>@record.SalaryMin - @record.SalaryMax</td>
+        <td>@record.ExpFrom - @record.ExpTo years</td>
+        <td>@record.Number</td>
+        <td class="d-flex justify-content-center align-items-center">
+          <a class="btn btn-primary" asp-controller="" asp-action="">Detail</a>
+        </td>
+      </tr>
+    }
+  </tbody>
+</table>
