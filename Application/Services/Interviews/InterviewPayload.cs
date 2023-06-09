@@ -1,5 +1,5 @@
 ﻿using Application.Contracts;
-using Domain.Entities;
+using Domain.Aggregates;
 
 namespace Application.Services.Interviews;
 
