@@ -18,5 +18,251 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+  margin-bottom: 20px;
+}
+/*NavTop*/
+@media all and (min-width: 992px) {
+    .navbar .dropdown-menu-end {
+        right: 0;
+        left: auto;
+    }
+
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        opacity: 0;
+        visibility: hidden;
+        transition: .3s;
+        margin-top: 0;
+    }
+
+    .navbar .nav-item:hover .nav-link {
+        color: #fff;
+    }
+
+    .navbar .dropdown-menu.fade-down {
+        top: 80%;
+        transform: rotateX(-75deg);
+        transform-origin: 0% 0%;
+    }
+
+    .navbar .dropdown-menu.fade-up {
+        top: 180%;
+    }
+
+    .navbar .nav-item:hover .dropdown-menu {
+        transition: .3s;
+        opacity: 1;
+        visibility: visible;
+        top: 100%;
+        transform: rotateX(0deg);
+    }
+    .nav-item.active > a {
+        background: rgba(255,255,255,0.3);
+        border-radius: 5px;
+    }
+}
+.h-36px {
+    height: 36px;
+}
+
+.h-40 {
+    min-height: 40px;
+}
+/*.navbar img {
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    margin-right: 10px;
+}
+*/
+/*Nav AutoHide*/
+.autohide {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1030;
+}
+.scrolled-down {
+    transform: translateY(-100%);
+    transition: all 0.3s ease-in-out;
+}
+
+.scrolled-up {
+    transform: translateY(0);
+    transition: all 0.3s ease-in-out;
+}
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1029;    
+}
+
+.bd-navbar {
+    background-color: #1896fe;
+    /*box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15),inset 0 -1px 0 rgba(0,0,0,0.15)*/
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: #f2f2f2;
+    font-weight: 500;
+}
+.dropdown-menu .dropdown-item {
+    background: #eeeeee;
+}
+.nav-link.active {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 6px;
+}
+.comming {
+    color: crimson;
+}
+.dropdown-menu li {
+    border-bottom: solid 1px #cdcdcd;
+}
+.dropdown-menu li:last-child {
+    border-bottom: 0;
+}
+.row-edit {
+    cursor: pointer;
+}
+fieldset {
+    padding: 12px;
+    border-radius: 0.5rem;
+    border: 1px solid #dee2e6;
+}
+
+legend {
+    background: #0d6efd;
+    color: white;
+    padding: 5px;
+    margin-bottom: 0px;
+    border-radius: 0.25rem;
+    font-size: 1em;
+    float: none;
+    width: auto;
+}
+.input-group-text {
+    background-color: #c6e2ff;
+    min-width: 110px
+}
+.width-200 {
+    min-width: 200px !important;
+    justify-content: right;
+}
+.width-120 {
+    min-width: 120px !important;
+}
+.width-100 {
+    min-width: 100px !important;
+}
+.width-170 {
+    min-width: 170px !important;
+}
+.width-50 {
+    min-width: 50px !important;
+}
+.width-auto{
+    min-width:auto!important;
+}
+/*fix: multiple select*/
+.select2-selection--multiple {
+    padding: 0rem 0.75rem !important;
+}
+
+    .select2-selection--multiple > ul {
+        display: inline-flex !important;
+    }
+
+        .select2-selection--multiple > ul > li {
+            padding: 0 0.3rem !important;
+            margin: 0.3rem !important;
+        }
+
+    .select2-selection--multiple .select2-search--inline {
+        display: inline-flex !important;
+        width: auto !important;
+        margin-top: 0.3rem !important;
+        vertical-align: middle;
+    }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance: textfield; /* Firefox */
+}
+
+/*
+    swapp month and year dropdown caldendar position
+*/
+
+/*.monthselect {
+    float: right !important;
+}
+
+.yearselect {
+    float: left !important;
+}*/
+
+/*.field-validation-error {
+    color: #e80c4d;
+    font-weight: bold;
+}*/
+
+/*.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #e80c4d;
+}
+
+.validation-summary-errors {
+    color: #e80c4d;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.validation-summary-valid {
+    display: none;
+}*/
+
+#detail table {
+    /* Not required only for visualizing */
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+}
+
+#detail thead tr th {
+    /* Important */
+    background-color: white !important;
+    position: sticky;
+    z-index: 100;
+    top: 0;
+    border: 1px solid #dee2e6;
+    /*outline: 1px solid #dee2e6;*/
+    /*border:0;*/
+}
+
+#detail tbody tr td {
+    border-bottom: 1px solid #dee2e6;
+}
+
+.modal{
+    top:24px;
+}
+
+label.input-group-text {
+    background-color: #c6e2ff;
+}
+sup{
+    padding-left: 3px;
 }

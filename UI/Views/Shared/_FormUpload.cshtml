@@ -1,0 +1,19 @@
+﻿@model System.Collections.Generic.IEnumerable<string>
+
+<div class="col-md-12 mb-2">
+    <label for="formFile" class="form-label">書類画像</label>
+</div>
+<div class="col-md-12 mb-3" style="max-height: 200px; overflow-y: auto">
+    @foreach (var file in Model)
+    {
+        <div class="d-flex justify-content-between mb-2">
+            <p class="m-0">
+                <a class="nav-link file">@file</a>
+            </p>
+                <button type="button" class="btn btn-danger deleteBtn" data-file="@file">削除</button>
+        </div>
+    }
+</div>
+<div class="col mb-2 d-flex justify-content-end">
+    <input type="button" id="btnUploadFile" class="btn btn-sm btn-success" value="ファイル登録" />
+</div>

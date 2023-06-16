@@ -1,0 +1,44 @@
+﻿@using Microsoft.AspNetCore.Identity
+@*@inject SignInManager<Fukui.Infrastructure.Identity.AppUser> SignInManager
+@inject UserManager<Fukui.Infrastructure.Identity.AppUser> UserManager*@
+
+<ul class="navbar-nav ms-auto">
+@*@if (SignInManager.IsSignedIn(User))*@
+@if (true)
+{
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle pe-3" href="#" data-bs-toggle="dropdown">Master Data</a>
+        <ul class="dropdown-menu fade-up">
+            <li><a class="dropdown-item" asp-controller="Master" asp-action="Bank">Bank</a></li>
+            <li><a class="dropdown-item" asp-controller="Master" asp-action="Department">Department</a></li>
+            <li><a class="dropdown-item" href="#"> Submenu item 3 </a></li>
+        </ul>
+    </li>
+    <li class="nav-item dropdown">
+        <a href="#" class="nav-item nav-link dropdown-toggle p-0" data-bs-toggle="dropdown">
+            <img src="https://www.tutorialrepublic.com/examples/images/avatar/3.jpg" class="avatar" alt="Avatar"> @User.Identity?.Name! <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-end fade-down">
+            <li><a href="#" class="dropdown-item"><i class="fa fa-user"></i> Profile</a></li>
+                <li><a class="dropdown-item" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a></li>
+        </ul>
+    </li>
+    <!--<li class="nav-item">
+        <a  class="nav-link" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @User.Identity?.Name!</a>
+    </li>
+    <li class="nav-item">
+        <form  class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+            <button  type="submit" class="nav-link btn btn-link">Logout</button>
+        </form>
+    </li>-->
+}
+else
+{
+    <li class="nav-item">
+        <a class="nav-link" asp-area="Identity" asp-page="/Account/Register">Register</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" asp-area="Identity" asp-page="/Account/Login">Login</a>
+    </li>
+}
+</ul>

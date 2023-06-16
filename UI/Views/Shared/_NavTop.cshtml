@@ -1,0 +1,51 @@
+﻿@using Microsoft.AspNetCore.Identity
+@*@inject SignInManager<Fukui.Infrastructure.Identity.AppUser> SignInManager*@
+
+@{
+	bool isSignin = true; //SignInManager.IsSignedIn(User);
+}
+<nav class="navbar navbar-expand-lg navbar-dark bd-navbar fixed-top">
+	<div class="container-fluid h-40">
+		<a class="navbar-brand" href="/">
+			<img src="~/img/fukui_logo.png" class="img-fluid h-36px" alt="Interview App" />
+		</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="main_nav">
+			@if (isSignin)
+			{
+			<partial name="_MainMenu" />
+			<partial name="_Logout" />
+			}
+			else
+			{
+			<partial name="_Login" />
+			}
+		</div> <!-- navbar-collapse.// -->
+	</div> <!-- container-fluid.// -->
+</nav>
+@if(isSignin)
+{
+<nav id="breadcrumb" aria-label="breadcrumb">
+		<ol class="breadcrumb bg-light py-2 ps-3">
+		<li class="breadcrumb-item"><a href="/">Home</a></li>
+	</ol>
+</nav>
+<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Logout Confirm</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+				<div class="modal-body">Are you sure you want to logout system?</div>
+			<div class="modal-footer">
+				<form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+					<button id="logout" onclick="javascript: localStorage.clear(); return true;" type="submit" class="btn btn-primary">Logout</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+}

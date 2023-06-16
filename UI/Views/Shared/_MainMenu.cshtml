@@ -1,0 +1,23 @@
+﻿<ul class="navbar-nav">
+	<li class="nav-item active me-xl-5 me-lg-3 d-none"> <a class="nav-link" href="#">Home</a> </li>
+	<li class="nav-item dropdown me-xl-5 me-lg-3">
+		<a class="nav-link dropdown-toggle" href="#stock" data-bs-toggle="dropdown">Recruitment</a>
+		@if (true || User.IsInRole("admin"))
+		{
+		<ul class="dropdown-menu fade-up">
+			<li><a class="dropdown-item" title="List">List</a></li>
+			<li><a class="dropdown-item" title="Create">Create</a></li>
+		</ul>
+		}
+	</li>
+	<li class="nav-item dropdown me-xl-5 me-lg-3">
+		<a class="nav-link dropdown-toggle" href="#stock" data-bs-toggle="dropdown">Master</a>
+		@if (true || User.IsInRole("admin"))
+		{
+			<ul class="dropdown-menu fade-up">
+				<li><a class="dropdown-item" title="Department">Department</a></li>
+				<li><a class="dropdown-item" title="Skill">Skill</a></li>
+			</ul>
+		}
+	</li>
+</ul>

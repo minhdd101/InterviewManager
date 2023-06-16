@@ -1,0 +1,162 @@
+﻿[
+  //CSS
+  {
+    "outputFileName": "wwwroot/css/site.min.css",
+    "inputFiles": [
+      "wwwroot/lib/bootstrap/dist/css/bootstrap.css",
+      "wwwroot/lib/font-awesome/css/all.css",
+      "wwwroot/lib/limonte-sweetalert2/sweetalert2.css",
+      "wwwroot/css/site.css"
+    ],
+    "minify": {
+      "enabled": false,
+      "renameLocals": false
+    },
+    "sourceMap": true
+  },
+  {
+    "outputFileName": "wwwroot/css/date.css",
+    "inputFiles": [
+      "wwwroot/lib/bootstrap-daterangepicker/daterangepicker.css"
+    ],
+    "minify": {
+      "enabled": false,
+      "renameLocals": false
+    },
+    "sourceMap": true
+  },
+  {
+    "outputFileName": "wwwroot/css/select2.css",
+    "inputFiles": [
+      "wwwroot/lib/select2/css/select2.css",
+      //"wwwroot/lib/bootstrap-multiselect/css/bootstrap-multiselect.css",
+      "wwwroot/lib/select2-bootstrap-5-theme/select2-bootstrap-5-theme.css"
+    ],
+    "minify": {
+      "enabled": false,
+      "renameLocals": false
+    },
+    "sourceMap": true
+  },
+  {
+    "outputFileName": "wwwroot/css/datatables.css",
+    "inputFiles": [
+      "wwwroot/lib/datatables.net-bs5/dataTables.bootstrap5.css"
+    ],
+    "minify": {
+      "enabled": false,
+      "renameLocals": false
+    },
+    "sourceMap": true
+  },
+  {
+    "outputFileName": "wwwroot/css/datatables_ed.css",
+    "inputFiles": [
+      "wwwroot/lib/datatables.net-bs5/dataTables.bootstrap5.css",
+      "wwwroot/lib/datatables.net-bs5/select.bootstrap5.css",
+      "wwwroot/lib/datatables.net-bs5/dataTables.dateTime.css",
+      "wwwroot/lib/datatables.net-editor/editor.dataTables.css",
+      "wwwroot/lib/datatables.net-buttons-bs5/buttons.bootstrap5.css"
+    ],
+    "minify": {
+      "enabled": false,
+      "renameLocals": false
+    },
+    "sourceMap": true
+  },
+  //JAVASCRIPT
+  {
+    "outputFileName": "wwwroot/js/site.min.js",
+    "inputFiles": [
+      "wwwroot/lib/jquery/jquery.js",
+      "wwwroot/lib/jquery-throttle-debounce/jquery.ba-throttle-debounce.js",
+      "wwwroot/lib/bootstrap/dist/js/bootstrap.js",
+      "wwwroot/lib/font-awesome/js/all.js",
+      "wwwroot/lib/limonte-sweetalert2/sweetalert2.js",
+      "wwwroot/lib/bootstrap-daterangepicker/moment.min.js",
+      "wwwroot/js/site.js",
+      "wwwroot/js/master.js"
+    ],
+    "minify": {
+      "enabled": false,
+      "renameLocals": false
+    },
+    "sourceMap": true
+  },
+  {
+    "outputFileName": "wwwroot/js/date.js",
+    "inputFiles": [
+      //"wwwroot/lib/bootstrap-daterangepicker/moment.min.js",
+      "wwwroot/lib/bootstrap-daterangepicker/daterangepicker.js",
+      "wwwroot/lib/bootstrap-daterangepicker/date_utils.js"
+    ],
+    "minify": {
+      "enabled": false,
+      "renameLocals": false
+    },
+    "sourceMap": true
+  },
+  {
+    "outputFileName": "wwwroot/js/select2.js",
+    "inputFiles": [
+      "wwwroot/lib/select2/js/select2.js",
+      //"wwwroot/lib/bootstrap-multiselect/js/bootstrap-multiselect.js",
+      "wwwroot/lib/select2/js/i18n/ja.js"
+    ],
+    "minify": {
+      "enabled": false,
+      "renameLocals": false
+    },
+    "sourceMap": true
+  },
+  {
+    "outputFileName": "wwwroot/js/datatables.js",
+    "inputFiles": [
+      "wwwroot/lib/datatables.net-bs5/jquery.dataTables.js",
+      "wwwroot/lib/datatables.net-bs5/dataTables.bootstrap5.js",
+      "wwwroot/lib/datatables.net-buttons/js/dataTables.buttons.js",
+      "wwwroot/lib/datatables.net-buttons-bs5/buttons.bootstrap5.js"
+    ],
+    "minify": {
+      "enabled": false,
+      "renameLocals": false
+    },
+    "sourceMap": true
+  },
+  {
+    "outputFileName": "wwwroot/js/datatables_ed.js",
+    "inputFiles": [
+      "wwwroot/lib/datatables.net-bs5/jquery.dataTables.js",
+      "wwwroot/lib/datatables.net-bs5/dataTables.bootstrap5.js",
+      "wwwroot/lib/datatables.net-bs5/dataTables.select.js",
+      "wwwroot/lib/datatables.net-bs5/dataTables.checkbox.js",
+      "wwwroot/lib/datatables.net-editor/datatables_editor.js", //https://sandbox.scoretility.com/static/js/Editor-2.0.10/js/dataTables.editor.js
+      "wwwroot/lib/datatables.net-editor/customField.select2.js",
+      "wwwroot/lib/datatables.net-editor/editor.bootstrap5.js",
+      "wwwroot/lib/datatables.net-buttons/js/dataTables.buttons.js",
+      "wwwroot/lib/datatables.net-buttons-bs5/buttons.bootstrap5.js",
+      "wwwroot/lib/datatables.net-bs5/dataTables.dateTime.js",
+      "wwwroot/lib/datatables.net-bs5/dataTables.default.js",
+      "wwwroot/lib/validate.js/validate.js"
+    ],
+    "minify": {
+      "enabled": false,
+      "renameLocals": false
+    },
+    "sourceMap": true
+  },
+  {
+    "outputFileName": "wwwroot/js/validation.js",
+    "inputFiles": [
+      "wwwroot/lib/jquery-validate/jquery.validate.js",
+      "wwwroot/lib/jquery-validate/additional-methods.js",
+      "wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "wwwroot/js/custom_validate.js"
+    ],
+    "minify": {
+      "enabled": false,
+      "renameLocals": false
+    },
+    "sourceMap": true
+  }
+]
